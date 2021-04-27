@@ -139,7 +139,6 @@
               height: 100%;
             "
             multiple
-            accept
             tabindex="-1"
           />
         </div>
@@ -152,7 +151,6 @@
             id="carousel-prev"
             class="disabled ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-button-disabled ui-state-disabled"
             role="button"
-            title
           >
             <span
               class="ui-button-icon-primary ui-icon ui-icon-triangle-1-w"
@@ -171,7 +169,6 @@
             id="carousel-next"
             class="disabled ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-button-disabled ui-state-disabled"
             role="button"
-            title
           >
             <span
               class="ui-button-icon-primary ui-icon ui-icon-triangle-1-e"
