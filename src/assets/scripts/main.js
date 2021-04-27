@@ -2,9 +2,10 @@
 
 var pid, allowActions = 1, flash = 0, attempts = 10, allowProcessing = 0, sessionID = randomString(), fileID, sortable = 0, extIndex = {},
     uploadCarousel, maxQueue = 20, uploader, resizeTimeout, winWidth, visibleFiles = 5, convertQueue = [], converting = 0, convertParams = {},
-    origin = 'https://peaceful-gorge-96528.herokuapp.com'
+    origin = window.location.protocol + "//" + window.location.hostname
 
 $(document).ready(function () {
+
     $(window).bind("resize orientationchange", updateSize).trigger("resize")
 
     $("#pick-files").button({ "icons": { "primary": "ui-icon-folder-open" } })
@@ -185,7 +186,7 @@ function getAutoConvert(fid) {
 
 function getACStatus(fid) {
     allowProcessing = fid
-    console.log(('status'));
+    console.log(('status'))
     x_ajax({
         req: {
             url: origin + "/status/" + sessionID + "/" + fid,
@@ -420,7 +421,7 @@ function removeElem(arr, item) {
 }
 
 function downloadURI(uri, name) {
-    console.log('uri', uri);
+    console.log('uri', uri)
     if (HTMLElement.prototype.click) {
         var link = document.createElement("a")
         link.download = name
