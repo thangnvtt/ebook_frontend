@@ -2,7 +2,7 @@
 
 var pid, allowActions = 1, flash = 0, attempts = 10, allowProcessing = 0, sessionID = randomString(), fileID, sortable = 0, extIndex = {},
     uploadCarousel, maxQueue = 20, uploader, resizeTimeout, winWidth, visibleFiles = 5, convertQueue = [], converting = 0, convertParams = {},
-    origin = 'https://peaceful-gorge-96528.herokuapp.com'
+    origin = 'https://f86557dc52a0.ngrok.io'
 
 $(document).ready(function () {
 
