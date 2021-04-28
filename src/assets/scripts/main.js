@@ -40,6 +40,7 @@ function initUploader() {
     var settings = {
         runtimes: "html5,flash",
         browse_button: "pick-files",
+        http_method: 'PUT',
         container: "upload-buttons-wrapper",
         max_file_size: sizeLimit,
         url: origin + "/upload/" + sessionID,
