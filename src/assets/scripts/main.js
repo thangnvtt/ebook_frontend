@@ -2,10 +2,9 @@
 
 var pid, allowActions = 1, flash = 0, attempts = 10, allowProcessing = 0, sessionID = randomString(), fileID, sortable = 0, extIndex = {},
     uploadCarousel, maxQueue = 20, uploader, resizeTimeout, winWidth, visibleFiles = 5, convertQueue = [], converting = 0, convertParams = {},
-    origin = 'https://peaceful-gorge-96528.herokuapp.com'
+    origin = 'http://18.224.94.208:3001/api', originPublic = 'http://18.224.94.208:3001/'
 
 $(document).ready(function () {
-
     $(window).bind("resize orientationchange", updateSize).trigger("resize")
 
     $("#pick-files").button({ "icons": { "primary": "ui-icon-folder-open" } })
@@ -362,7 +361,7 @@ function fileStatus(fid, status) {
     if (!status) {
         $("#" + fid + " .plupload_thumb").empty()
     } else if (status.indexOf(".") != -1) {
-        $("#" + fid + " .plupload_thumb").empty().css({ "background": "url(" + status + ") center center no-repeat" })
+        $("#" + fid + " .plupload_thumb").empty().css({ "background": "url(" + originPublic + status + ") center center no-repeat" })
     } else {
         $("#" + fid + " .plupload_thumb").empty().append('<div class="status-wrapper"><div class="status-icon status-' + status + '"></div><div class="status-text">' + text["js_st_" + status] + '</div></div>')
         if (status == "converting") {
