@@ -2,7 +2,7 @@
 
 var pid, allowActions = 1, flash = 0, attempts = 10, allowProcessing = 0, sessionID = randomString(), fileID, sortable = 0, extIndex = {},
     uploadCarousel, maxQueue = 20, uploader, resizeTimeout, winWidth, visibleFiles = 5, convertQueue = [], converting = 0, convertParams = {},
-    origin = 'http://18.224.94.208:3001/api', originPublic = 'http://18.224.94.208:3001/'
+    origin = 'http://35.222.72.204:3001/api', originPublic = 'http://35.222.72.204:3001/'
 
 $(document).ready(function () {
     $(window).bind("resize orientationchange", updateSize).trigger("resize")
